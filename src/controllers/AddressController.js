@@ -10,7 +10,7 @@ module.exports = {
         });
 
         if(!student){
-            return res.status(400).json({ error: 'Aluno Não Em comtrado' });
+            return res.status(400).json({ error: 'Student Not in Contract' });
         }
 
         return res.json(student);
@@ -23,7 +23,7 @@ module.exports = {
         const student = await Students.findByPk(student_id);
 
         if (!student) {
-            return res.status(400).json({ error: 'Aluno Não Em comtrado' });
+            return res.status(400).json({ error: 'Student Not in Contract' });
         }
 
         const address = await Address.create({
