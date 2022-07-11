@@ -9,6 +9,10 @@ module.exports = {
             include: { association: 'addresses' }
         });
 
+        if(!student){
+            return res.status(400).json({ error: 'Aluno Não Em comtrado' });
+        }
+
         return res.json(student);
     },
 
