@@ -7,9 +7,9 @@ const Address = require('../models/Address');
 const conexao = new Sequelize(dbConfig);
 
 conexao.authenticate().then(function() {
-    console.log('Conexão Com o Banco de Dados Realizado Com Sucesso - ✅')
+    console.log('Database Connection Successful - ✅')
 }).catch(function() {
-    console.log('ERRO: Falha ao Se Conectar no Banco de Dados - ❌')
+    console.log('ERROR: Failed to Connect to Database - ❌')
 });
 
 Students.init(conexao);
